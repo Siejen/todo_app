@@ -4,7 +4,17 @@ var form = document.getElementById('toDo_form');		//Line 3 gets a reference to t
 var list = document.getElementById('toDo_list');
 
 var boxClick = function() {
-	this.style.backgroundColor = "red";
+
+	if( !this.clicked ) {
+		this.style.backgroundColor = "red";
+		this.clicked = true;
+	}
+	else {
+		//remove the element
+		var li = this.parentNode;
+		list.removeChild(li);
+	}
+
 }
 
 // single letter variables are bad!
@@ -21,6 +31,7 @@ var addItem = function(item) {
 
 	checkBoxDiv.className = "todoCheckBox";
 	checkBoxDiv.onclick = boxClick;
+	checkBoxDiv.clicked = false;
 
 
     // 1. add the two divs to the list item tag (ie newLi)
