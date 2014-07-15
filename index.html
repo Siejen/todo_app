@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo App</title>
+  <link rel="stylesheet" type="text/css" href="toDo.css">
+</head>
+<body>
+  <h1>Todo App</h1>
+  <form id = "toDo_form"> <!-- A form is a way of collecting information. -->
+    <fieldset>
+    <legend>Enter Your To Do List</legend>
+    <label for="new_item">New Item</label>
+    <input type="text" name="newItem" id="new_item" placeholder="Enter a New Item to the List" size=30>
+
+    <input type="submit" value="Add Item"> <!-- The "value" is the text ("Add Item" in this case) that appears in a button. -->
+    <!-- Try to refrain from using the button tag when creating a form. -->
+
+    <input type="submit" value="X"> <!-- The "value" is the text ("X" in this case) that appears in a button. -->
+    <!-- Try to refrain from using the button tag when creating a form. -->    
+  
+    </fieldset>
+  </form>
+  <h2>My To Do List</h2>
+  <ul id="toDo_list"></ul>
+  <script type="text/javascript" src="toDo.js"></script>
+</body>
+</html>
