@@ -5,8 +5,18 @@ var list = document.getElementById('toDo_list');
 
 // single letter variables are bad!
 var addItem = function(item) {
-	//console.log(t.value, a.value, r.value);
-	list.innerHTML += "<li>" + item.value + "</li>"
+	//1. Create element i.e. create a new tag
+	//2. Create text node
+	//3. Add the text node to the element from 1
+	//4. Add the element from 1 to the list 
+
+	var newLi = document.createElement("li");				//New element created was the "list item" tag
+	var newItemNode = document.createTextNode(item.value); 	//A new text node was created which was the results of the user input (item.value)
+
+	newLi.appendChild(newItemNode);
+	list.appendChild(newLi);
+	//console.log(item.value);
+	//list.innerHTML += "<li>" + item.value + "</li>"
 }
 
 form.onsubmit = function (event) {
